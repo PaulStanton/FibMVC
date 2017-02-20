@@ -20,7 +20,6 @@ namespace FibMVC.Controllers
         }
         public PartialViewResult DisplayFib(FibModel test)
         {
-            
             return PartialView(test);
         }
     }

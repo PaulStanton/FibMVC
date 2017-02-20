@@ -1,7 +1,7 @@
 ﻿@model FibMVC.Models.FibModel
 
 
-@foreach (var item in FibMVC.Biz.Biz.FibonacciCalculator(15))
+@foreach (var item in FibMVC.Biz.Biz.FibonacciCalculator(Model.NumFib))
 {
     @item
     <br />

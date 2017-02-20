@@ -1,19 +1,19 @@
 ﻿@model FibMVC.Models.FibModel
 
-@{
-    ViewBag.Title = "InputView";
+
+    @{ViewBag.Title = "InputFib"; }
 
 
 <h2>InputView</h2>
 
-   
-    
-       <div> Number Of Fib outputs: @Html.TextBoxFor(x => x.NumFib, new
-        {
-            @placeholder = "Number of fibs to display" })</div>
-        <br /> 
-       @Ajax.ActionLink("Show Fibs", "DisplayFib", "FibInput",new AjaxOptions() { UpdateTargetId = "fibID" })
-    
-    <div id="fibID"></div>
-<div>Hi</div>
+  
+    @using (Ajax.BeginForm("DisplayFib", "FibInput", new AjaxOptions { UpdateTargetId = "fibID" }))
+    {
+        @Html.TextBoxFor(model => model.NumFib)
+        <br />
+        <input type="submit" name="submit"  value="Ajax Post" />
+    }
+       <div id="fibID"></div>
+
+
     
