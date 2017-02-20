@@ -1,0 +1,15 @@
+﻿@model FibMVC.Models.TestModel
+
+@{
+    ViewBag.Title = "TestView";
+}
+
+<h2>TestView</h2>
+<div>
+    @foreach (var item in FibMVC.Biz.Biz.FibonacciCalculator(15))
+    {
+        @item
+        <br />
+    }
+</div>
+
