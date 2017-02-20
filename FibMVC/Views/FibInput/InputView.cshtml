@@ -2,7 +2,18 @@
 
 @{
     ViewBag.Title = "InputView";
-}
+
 
 <h2>InputView</h2>
-<div>Number Of Fib outputs: @Html.TextBoxFor(x => x.FibNumbers, new { @placeholder = "Number of fibs to display" }) </div>
+
+   
+    
+       <div> Number Of Fib outputs: @Html.TextBoxFor(x => x.NumFib, new
+        {
+            @placeholder = "Number of fibs to display" })</div>
+        <br /> 
+       @Ajax.ActionLink("Show Fibs", "DisplayFib", "FibInput",new AjaxOptions() { UpdateTargetId = "fibID" })
+    
+    <div id="fibID"></div>
+<div>Hi</div>
+    
