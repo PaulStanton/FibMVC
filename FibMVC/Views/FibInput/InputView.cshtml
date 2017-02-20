@@ -1,0 +1,8 @@
+﻿@model FibMVC.Models.FibModel
+
+@{
+    ViewBag.Title = "InputView";
+}
+
+<h2>InputView</h2>
+<div>Number Of Fib outputs: @Html.TextBoxFor(x => x.FibNumbers, new { @placeholder = "Number of fibs to display" }) </div>
